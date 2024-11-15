@@ -39,7 +39,8 @@ def count_node(n):
         return 0
     else:
         return 1 + count_node(n.left) + count_node(n.right)
-# 재귀 함수를 사용하는 것이 전역변수 count를 사용해서 1씩 증가시키는 것보다 효율적이다 부수효과
+# 재귀 함수를 사용하는 것이 전역변수 count를 사용해서 1씩 증가시키는 것보다 효율적이다 
+# 부수효과가 존재하기 때문이다
 
 def count_leaf(n):
     if n is None:
