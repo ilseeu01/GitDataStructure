@@ -6,7 +6,7 @@ class BSTNode:
         self.left = None
         self.right = None
 
-def search_bst(n, key):
+def search_bst(n, key): # 순환구조
     if n == None:
         return None
     elif key == n.key:
@@ -16,7 +16,7 @@ def search_bst(n, key):
     else:
         return search_bst(n.right, key)
 
-def search_bst_iter(n, key):
+def search_bst_iter(n, key): # 반복구조
     while n != None:
         if key == n.key:
             return n
