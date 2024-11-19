@@ -1,5 +1,10 @@
-from BinSrchTree import search_bst, search_max_bst, search_min_bst, search_value_bst, insert_bst, delete_bst, BSTNode
+from BinSrchTree import *
 
+def inorder(n):
+    if n is not None:
+        inorder(n.left)
+        print(n.key, end = ' ')
+        inorder(n.right)
 
 class BSTMap():
     def __init__(self):
@@ -8,10 +13,10 @@ class BSTMap():
     def isEmpty(self):
         return self.root == None
 
-    def fineMax(self):
+    def findMax(self):
         return search_max_bst(self.root)
     
-    def fineMin(self):
+    def findMin(self):
         return search_min_bst(self.root)
     
     def search(self, key):
